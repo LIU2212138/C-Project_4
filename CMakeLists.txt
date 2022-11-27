@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.22.1)
+project(Project_4 C)
+
+set(CMAKE_C_STANDARD 11)
+
+add_executable(Project_4 main.c function.h function.c)
+set(CMAKE_C_FLAGS "-std=c11  -mfma -mavx -mavx2 -msse -msse2 -msse3")
+add_compile_options(-lopenblas)
+target_link_libraries(Project_4 PUBLIC openblas)
+FIND_PACKAGE( OpenMP REQUIRED)
+if(OPENMP_FOUND)
+    message("OPENMP FOUND")
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+endif()
