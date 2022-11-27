@@ -181,7 +181,7 @@ bool judgeNull(const martix *origin){
         return false;
     }
 }
-bool *judgeEqual(const martix *m1, const martix *m2){
+bool judgeEqual(const martix *m1, const martix *m2){
     if(judgeNull(m1)|| judgeNull((m2))||m1->cols!=m2->rows){
         fprintf(stderr,"ERROR:File %s, Line %d, Function %s(): m1 is null.\n",__FILE__,__LINE__,__FUNCTION__);
         return false;
