@@ -18,5 +18,5 @@ martix *matmul_plain(const martix *m1, const martix *m2);
 martix *matmul_improved(const martix *m1, const martix *m2);
 bool judgeNull(const martix *origin);
 martix *matmul_oblas(const martix *m1, const martix *m2);
-bool *judgeEqual(const martix *m1, const martix *m2);
+bool judgeEqual(const martix *m1, const martix *m2);
 #endif //PROJECT_4_FUNCTION_H
